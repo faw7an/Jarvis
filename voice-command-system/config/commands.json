@@ -1,0 +1,20 @@
+{
+  "commands": {
+    "shutdown": {
+      "phrase": "shut down",
+      "action": "shutdown now"
+    },
+    "restart": {
+      "phrase": "restart",
+      "action": "reboot"
+    },
+    "suspend": {
+      "phrase": "suspend",
+      "action": "systemctl suspend"
+    },
+    "lock": {
+      "phrase": "lock",
+      "action": "gnome-screensaver-command -l"
+    }
+  }
+}
