@@ -3,7 +3,6 @@ import subprocess
 import json
 import os
 import sys
-import getpass
 
 def load_commands():
     with open(os.path.join(os.path.dirname(__file__), '../config/commands.json')) as f:

@@ -1,19 +1,17 @@
+import os
+
 def shutdown():
-    import os
     os.system("shutdown now")
 
 def restart():
-    import os
     os.system("reboot")
 
 def suspend():
-    import os
     os.system("systemctl suspend")
 
 def lock():
-    import os
-    os.system("gnome-screensaver-command -l")  # Adjust this command based on your desktop environment
-
+    os.system("gnome-screensaver-command -l")  
+    
 def execute_action(action):
     actions = {
         "shutdown": shutdown,

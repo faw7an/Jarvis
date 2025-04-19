@@ -1,13 +1,17 @@
 #!/bin/bash
 
+# Ensure script execution path
+cd "/home/fawzan/Documents/CS PROJECTS/Jarvis/voice-command-system"
+
+# Set DISPLAY for GUI applications if needed
+export DISPLAY=:0
+export XDG_RUNTIME_DIR=/run/user/$(id -u)
+
 # Ensure the necessary permissions for the scripts
-chmod +x /path/to/voice-command-system/scripts/voice_listener.py
-chmod +x /path/to/voice-command-system/scripts/command_executor.sh
+chmod +x scripts/voice_listener.py
+chmod +x scripts/command_executor.sh
 
-# Run the voice listener script in the background
-python3 /path/to/voice-command-system/scripts/voice_listener.py &
-
-# Optionally, you can redirect output to a log file
-# python3 /path/to/voice-command-system/scripts/voice_listener.py >> /path/to/logfile.log 2>&1 &
+# Start the voice listener
+python3 scripts/voice_listener.py >> /tmp/jarvis_log.txt 2>&1
 
 # End of startup script
